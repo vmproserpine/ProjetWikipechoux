@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RemoteSqlProvider } from '../../providers/remotesql/remotesql';
-import { MoExposant } from '../../metiers/MoExposant' ;
+import { MoVideo } from '../../metiers/MoVideo' ;
 import { FrmExposantPage } from '../frm-exposant/frm-exposant' ;
 import { ListeSqlModelePage } from '../../tools/liste-sql-modele' ;
 
@@ -26,7 +26,7 @@ export class ListeVideo extends ListeSqlModelePage
     public navParams: NavParams,
     public sqlPrd: RemoteSqlProvider) 
   {
-    super( new MoExposant(), FrmExposantPage, navCtrl, navParams, sqlPrd ) ;
+    super( new MoVideo(), FrmExposantPage, navCtrl, navParams, sqlPrd ) ;
 
     this.rId = null ;
     this.rNom = null ;

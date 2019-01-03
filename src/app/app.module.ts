@@ -40,6 +40,7 @@ import { ListeMot } from '../pages/listeMot/listeMot';
 import { ListeThemes } from '../pages/listeThemes/listeThemes';
 import { ListeUser } from '../pages/listeUser/listeUser';
 import { ListeVideo } from '../pages/listeVideo/listeVideo';
+import { ListePhoto } from '../pages/listePhoto/listePhoto';
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import { ListeVideo } from '../pages/listeVideo/listeVideo';
     ListeAnnexe,
     ListeMadeleine,
     ListeMot,
+    ListePhoto,
     ListeThemes,
     ListeUser,
     ListeVideo
@@ -91,6 +93,7 @@ import { ListeVideo } from '../pages/listeVideo/listeVideo';
     ListeAnnexe,
     ListeMadeleine,
     ListeMot,
+    ListePhoto,
     ListeThemes,
     ListeUser,
     ListeVideo

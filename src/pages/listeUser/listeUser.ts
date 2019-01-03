@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RemoteSqlProvider } from '../../providers/remotesql/remotesql';
-import { MoUtilisateur } from '../../metiers/MoUtilisateur' ;
+import { MoUser } from '../../metiers/MoUser' ;
 import { ListeFrmSqlModelePage } from '../../tools/liste-frm-sql-modele' ;
 import { ToastController } from 'ionic-angular';
 
@@ -22,7 +22,7 @@ export class ListeUser extends ListeFrmSqlModelePage
     public sqlPrd: RemoteSqlProvider,
     public toastCtrl: ToastController) 
   {
-    super( new MoUtilisateur(), navCtrl, navParams, sqlPrd, toastCtrl ) ;
+    super( new MoUser(), navCtrl, navParams, sqlPrd, toastCtrl ) ;
 
     this.exposants = [] ;
   }
