@@ -1,0 +1,14 @@
+<div>
+    <button (click)="onOpenFile()" *ngIf="showOpenButton=='yes'">Ouvrir</button>
+    <input type="text" [(ngModel)]="path" size=80>
+    <button (click)="onOpenDir()">...</button>
+  <div *ngIf="files.length">
+    <div>
+      {{currentPath}}
+      <button (click)="onParentDir()"><<</button>
+      <button (click)="onOk()">Ok</button>
+      <button (click)="onCancel()">Cancel</button>
+    </div>
+    <div *ngFor="let f of files" (click)="onSelectDir( f )">{{f}}</div>
+  </div>
+</div>

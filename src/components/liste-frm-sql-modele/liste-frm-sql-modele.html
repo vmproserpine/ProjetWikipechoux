@@ -1,0 +1,14 @@
+<table class="tab">
+    <thead>
+      <tr class="tab-header">
+        <td class="col-header">A</td>
+        <td class="col-header">B</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of liste; let even = even; let odd = odd" [ngClass]="{'tab-row-odd': odd,'tab-row-even': even}">
+        <ng-content></ng-content>
+      </tr>
+    </tbody>
+  </table>
+

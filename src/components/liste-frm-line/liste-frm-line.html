@@ -1,0 +1,20 @@
+<ion-card>
+    <table class="tab">
+        <thead>
+          <tr class="tab-header">
+            <td class="col-header">A</td>
+            <td class="col-header">B</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of liste; let even = even; let odd = odd"  [ngClass]="{'tab-row-odd': odd,'tab-row-even': even}">
+            <td class="cell cell-text">{{even}}</td>
+            <td class="cell cell-text">{{odd}}</td>
+            <td class="cell cell-text">{{p.prenom}}</td>
+            <td class="cell cell-text">{{p.nom}}</td>
+            <td class="cell cell-text"><input type="text" [(ngModel)]="p.prenom"></td>
+            <td class="cell cell-text"><input type="text" [(ngModel)]="p.nom"></td>
+          </tr>
+        </tbody>
+      </table>
+</ion-card>

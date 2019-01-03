@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Mise à jour du RDV n° {{object.id}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary">Nom du RDV:</ion-label>
+      <ion-input [(ngModel)]="object.nom">{{leNom}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Numero du stand:</ion-label>
+      <ion-input [(ngModel)]="object.idStand">{{leNumStand}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Jour du RDV:</ion-label>
+      <ion-input [(ngModel)]="object.jour">{{leJour}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Heure du RDV:</ion-label>
+      <ion-input [(ngModel)]="object.heure">{{leHeure}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Durée du RDV:</ion-label>
+      <ion-input [(ngModel)]="object.duree">{{laDuree}}</ion-input>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button (click)="onCancel()">Annuler</button>
+  <button ion-button color="secondary" (click)="onSave()">Enregistrer</button>
+  <button ion-button color="danger" (click)="onRemove()">Supprimer</button>
+
+</ion-content>

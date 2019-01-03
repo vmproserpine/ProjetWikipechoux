@@ -1,0 +1,66 @@
+liste-frm-line 
+{
+    .tab
+    {
+        overflow-x: auto;
+    }
+    
+    .tab-body
+    {
+        overflow-y: scroll;    
+    }
+    
+    .tab-header
+    {
+        color: blue;
+        background: grey ;
+        border-color: black ;
+        border-width: 1px ;
+        border-style: solid ;
+    }
+    
+    .col-header
+    {
+        border-color: rgb(145, 139, 139) ;
+        border-width: 1px ;
+        border-left-style: dotted ;
+        text-align: center ;
+    }
+    
+    .cell
+    {
+        color: rgb(7, 0, 0);
+        border-color: grey ;
+        border-width: 1px ;
+        border-style: dotted ;
+        padding-left: 3px;
+        padding-right: 3px;
+        height: 20px ;
+    }
+    
+    .cell-text
+    {
+        text-align: left ; 
+    }
+    
+    .cell-number
+    {
+        text-align: right ;
+    }
+    
+    .tab-row-selected
+    {
+        background: rgb(179, 142, 142) ;
+    }
+    
+    .tab-row-odd
+    {
+        background: rgb(173, 157, 84) ;
+    }
+    
+    .tab-row-even
+    {
+        background: rgb(235, 223, 225) ;
+    }
+    
+}

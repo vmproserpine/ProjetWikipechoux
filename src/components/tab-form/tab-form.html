@@ -1,0 +1,19 @@
+<div class="contenaire">
+  <section class="tableau">
+    <div class="legende">{{title}}</div>
+    <header class="tete">
+      <div class="cellule" *ngFor="let c of columns">{{c.title}}</div>
+    </header>
+    <!--
+    <footer class="pied">
+      <div class="cellule">Pied</div>
+    </footer>
+    -->
+    <div class="corp">
+      <ng-content></ng-content>
+    </div>
+    <div class="colgroupe">
+      <!--<div class="col"></div>-->
+    </div>
+  </section>
+</div>
