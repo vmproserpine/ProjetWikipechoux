@@ -16,7 +16,7 @@ import { FrmSqlModelePage } from '../../tools/frm-sql_modele' ;
   templateUrl: 'saisie-livre.html'
 })
 
-export class SaisieLivrePage extends FrmSqlModelePage
+export class AjoutMot extends FrmSqlModelePage
 {
     @Input() private idExposant:    number ;
 

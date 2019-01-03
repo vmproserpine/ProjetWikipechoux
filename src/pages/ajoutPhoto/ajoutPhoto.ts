@@ -16,7 +16,7 @@ import { FrmSqlModelePage } from '../../tools/frm-sql_modele' ;
   templateUrl: 'saisie-livre.html'
 })
 
-export class AjoutAnnexe extends FrmSqlModelePage
+export class AjoutPhoto extends FrmSqlModelePage
 {
     @Input() private idExposant:    number ;
 

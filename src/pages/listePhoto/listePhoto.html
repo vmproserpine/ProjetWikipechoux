@@ -1,0 +1,49 @@
+<!--
+  Generated template for the ListeEquipementsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Liste des exposants</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="onNewItem()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>    
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <div class="lavbox">
+      <div class="lahbox">
+        <label>Recherche par Identifiant:</label>
+        <input type="text" [(ngModel)]="rId" placeholder="n° identifiant" (change)="onFiltre()"/>      
+      </div>
+      <div class="lahbox">
+        <label>Recherche par nom:</label>
+        <input type="text" [(ngModel)]="rNom" placeholder="Nom" (change)="onFiltre()"/>      
+      </div>
+    </div>
+    <div class="lavbox">
+      <div class="lahbox">
+          <button ion-button item-end (click)="onFiltre()">Filtrer</button>
+      </div>
+    </div>
+  </ion-card>
+    
+  <ion-list>
+    <button ion-item *ngFor="let e of liste" (click)="onSelectItem($event, e)">
+      <b>{{e.id}}</b> {{e.nom}} 
+    </button>
+  </ion-list>
+
+</ion-content>
