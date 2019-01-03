@@ -7,13 +7,14 @@ import { ListeSqlModelePage } from '../../tools/liste-sql-modele' ;
 import { MoLivre } from '../../metiers/MoLivre' ;
 import { MoTheme } from '../../metiers/MoTheme' ;
 import { MoTrancheAge } from '../../metiers/MoTrancheAge' ;
+import { MoVideo } from '../../metiers/MoVideo' ;
 
 import { FrmSqlModelePage } from '../../tools/frm-sql_modele' ;
  
 
 @Component({
-  selector: 'page-saisie-livre',
-  templateUrl: 'saisie-livre.html'
+  selector: 'page-ajoutVideo',
+  templateUrl: 'ajoutVideo.html'
 })
 
 export class AjoutVideo extends FrmSqlModelePage
