@@ -17,7 +17,7 @@ import { ListeSqlModelePage } from '../../tools/liste-sql-modele' ;
   selector: 'page-liste-exposants',
   templateUrl: 'liste-exposants.html',
 })
-export class ListeExposantsPage extends ListeSqlModelePage
+export class ListeVideo extends ListeSqlModelePage
 {
   private rId: number ;
   private rNom: string ;

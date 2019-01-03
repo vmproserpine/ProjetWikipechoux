@@ -12,7 +12,7 @@ import { ToastController } from 'ionic-angular';
   selector: 'page-liste-utilisateurs',
   templateUrl: 'liste-utilisateurs.html',
 })
-export class ListeUtilisateursPage extends ListeFrmSqlModelePage
+export class ListeUser extends ListeFrmSqlModelePage
 {
   private exposants: Array<{id:number,nom:string}> ;
 
