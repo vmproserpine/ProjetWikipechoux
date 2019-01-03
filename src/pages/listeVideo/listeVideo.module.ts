@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { ListeExposantsPage } from './listeVideo';
+import { ListeVideo } from './listeVideo';
 
 @NgModule({
   declarations: [
-    ListeExposantsPage,
+    ListeVideo,
   ],
   imports: [
-    IonicPageModule.forChild(ListeExposantsPage),
+    IonicPageModule.forChild(ListeVideo),
   ],
 })
-export class ListeExposantsPageModule {}
+export class LListeVideoModule {}
