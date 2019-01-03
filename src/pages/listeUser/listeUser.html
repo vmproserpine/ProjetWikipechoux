@@ -1,0 +1,45 @@
+
+<ion-header>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>  
+  <ion-navbar>
+    <ion-title>Liste des utilisateurs</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <button ion-button icon-only (click)="onNewItem()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+    <tab-form title="Liste des utilisateurs">
+      <tab-row *ngFor="let object of liste">
+        <tab-line-selector>
+          <tab-bt-save [object]="object"></tab-bt-save>
+          <tab-bt-cancel [object]="object"></tab-bt-cancel>
+          <tab-bt-remove title="Supprimer" [object]="object" [liste]="liste"></tab-bt-remove>
+        </tab-line-selector>
+        <tab-cell title="N°">{{object.id}}</tab-cell>
+        <tab-cell title="Nom">
+          <input type="text" size=30 [(ngModel)]="object.nom">
+        </tab-cell>
+        <tab-cell title="Privilège">
+          <select [(ngModel)]="object.privilege">
+            <option value="0">Inactif</option>
+            <option value="1">Exposant</option>
+            <option value="10">Organisation</option>
+            <option value="20">Admin</option>
+          </select>
+        </tab-cell>
+        <tab-cell title="Compte">
+            <input type="text" size=20 [(ngModel)]="object.compte">
+        </tab-cell>
+        <tab-cell title="Mot de passe">
+          <input type="text" size=20 [(ngModel)]="object.mdp">
+        </tab-cell>
+        <tab-cell title="Exposant">
+          <input type="number" [(ngModel)]="object.idExposant">
+        </tab-cell>
+      </tab-row>
+    </tab-form>
+</ion-content>

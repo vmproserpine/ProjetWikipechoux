@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Mise à jour du livre n° {{object.id}} {{object.titre}}</ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary">Titre du livre:</ion-label>
+      <ion-input [(ngModel)]="object.titre">{{leTitre}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Auteur du livre:</ion-label>
+      <ion-input [(ngModel)]="object.auteur">{{leAuteur}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Editeur du livre:</ion-label>
+      <ion-input [(ngModel)]="object.editeur">{{leEditeur}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Tranche d'âge:</ion-label>
+      <ion-select [(ngModel)]="object.idTrancheAge">
+        <ion-option *ngFor="let t of tranchesAge" value={{t.id}}>
+          {{t.libelle}}
+        </ion-option>
+      </ion-select>
+    </ion-item> 
+    <ion-item>
+      <ion-label color="primary">Thème:</ion-label>
+      <ion-select [(ngModel)]="object.idTheme">
+        <ion-option *ngFor="let t of themes" value={{t.id}}>
+          {{t.libelle}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Commentaire: </ion-label>
+      <ion-textarea rows="5" [(ngModel)]="object.commentaire" (input)="change()">{{leResume}}</ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Résumé du livre: </ion-label>
+      <ion-textarea rows="5" [(ngModel)]="object.enResume" (input)="change()">{{leResume}}</ion-textarea>
+    </ion-item>
+    <ion-item>
+      <upload-image 
+        [show-size-list]="'false'" 
+        [(imageUrl)]="object.image"
+        [uploadSrvUrl]="'http://www.lcs.alsace/flc/php/'"
+        [imageSize]=300
+        [imageDirectory]="'../images'"></upload-image>
+      <p *ngIf="object.image">
+        <img src={{object.image}}>
+      </p>  
+    </ion-item>
+  </ion-list>
+  <button ion-button (click)="onCancel()">Annuler</button>
+  <button ion-button color="secondary" (click)="onSave()">Enregistrer</button>
+  <button ion-button color="danger" (click)="onRemove()">Supprimer</button>
+</ion-content>
