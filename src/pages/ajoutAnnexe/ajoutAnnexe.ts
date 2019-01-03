@@ -7,13 +7,14 @@ import { ListeSqlModelePage } from '../../tools/liste-sql-modele' ;
 import { MoLivre } from '../../metiers/MoLivre' ;
 import { MoTheme } from '../../metiers/MoTheme' ;
 import { MoTrancheAge } from '../../metiers/MoTrancheAge' ;
+import { MoAnnexe } from '../../metiers/MoAnnexe' ;
 
 import { FrmSqlModelePage } from '../../tools/frm-sql_modele' ;
  
 
 @Component({
-  selector: 'page-saisie-livre',
-  templateUrl: 'saisie-livre.html'
+  selector: 'page-ajoutAnnexe',
+  templateUrl: 'ajoutAnnexe.html'
 })
 
 export class AjoutAnnexe extends FrmSqlModelePage

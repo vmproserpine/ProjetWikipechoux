@@ -7,13 +7,14 @@ import { ListeSqlModelePage } from '../../tools/liste-sql-modele' ;
 import { MoLivre } from '../../metiers/MoLivre' ;
 import { MoTheme } from '../../metiers/MoTheme' ;
 import { MoTrancheAge } from '../../metiers/MoTrancheAge' ;
+import { MoMot } from '../../metiers/MoMot' ;
 
 import { FrmSqlModelePage } from '../../tools/frm-sql_modele' ;
  
 
 @Component({
-  selector: 'page-saisie-livre',
-  templateUrl: 'saisie-livre.html'
+  selector: 'page-ajoutMot',
+  templateUrl: 'ajoutMot.html'
 })
 
 export class AjoutMot extends FrmSqlModelePage
