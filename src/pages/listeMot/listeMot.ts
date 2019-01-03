@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RemoteSqlProvider } from '../../providers/remotesql/remotesql';
-import { MoMot } from '../../metiers/MoMot ' ;
+import { MoMot } from '../../metiers/MoMot' ;
 import { FrmExposantPage } from '../frm-exposant/frm-exposant' ;
 import { ListeSqlModelePage } from '../../tools/liste-sql-modele' ;
 
