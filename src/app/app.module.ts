@@ -41,6 +41,13 @@ import { ListeThemes } from '../pages/listeThemes/listeThemes';
 import { ListeUser } from '../pages/listeUser/listeUser';
 import { ListeVideo } from '../pages/listeVideo/listeVideo';
 import { ListePhoto } from '../pages/listePhoto/listePhoto';
+import { AjoutAnnexe } from '../pages/ajoutAnnexe/ajoutAnnexe';
+import { AjoutMadeleine } from '../pages/ajoutMadeleine/ajoutMadeleine';
+import { AjoutMot } from '../pages/ajoutMot/ajoutMot';
+import { AjoutPhoto } from '../pages/ajoutPhoto/ajoutPhoto';
+import { AjoutThemes } from '../pages/ajoutThemes/ajoutThemes';
+import { AjoutUser } from '../pages/ajoutUser/ajoutUser';
+import { AjoutVideo } from '../pages/ajoutVideo/ajoutVideo';
 
 @NgModule({
   declarations: [
@@ -72,7 +79,14 @@ import { ListePhoto } from '../pages/listePhoto/listePhoto';
     ListePhoto,
     ListeThemes,
     ListeUser,
-    ListeVideo
+    ListeVideo, 
+    AjoutAnnexe,
+    AjoutMadeleine,
+    AjoutMot,
+    AjoutPhoto,
+    AjoutThemes,
+    AjoutUser,
+    AjoutVideo
   ],
   imports: [
     BrowserModule,
@@ -96,7 +110,14 @@ import { ListePhoto } from '../pages/listePhoto/listePhoto';
     ListePhoto,
     ListeThemes,
     ListeUser,
-    ListeVideo
+    ListeVideo,
+    AjoutAnnexe,
+    AjoutMadeleine,
+    AjoutMot,
+    AjoutPhoto,
+    AjoutThemes,
+    AjoutUser,
+    AjoutVideo
   ],
   providers: [
     StatusBar,
