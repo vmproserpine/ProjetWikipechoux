@@ -14,8 +14,8 @@ import { ListeSqlModelePage } from '../../tools/liste-sql-modele' ;
 
 @IonicPage()
 @Component({
-  selector: 'page-liste-exposants',
-  templateUrl: 'liste-exposants.html',
+  selector: 'page-listeVideo',
+  templateUrl: 'listeVideo.html',
 })
 export class ListeVideo extends ListeSqlModelePage
 {

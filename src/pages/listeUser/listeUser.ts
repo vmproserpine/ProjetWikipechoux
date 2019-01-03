@@ -9,8 +9,8 @@ import { ToastController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-liste-utilisateurs',
-  templateUrl: 'liste-utilisateurs.html',
+  selector: 'page-listeUser',
+  templateUrl: 'listeUser.html',
 })
 export class ListeUser extends ListeFrmSqlModelePage
 {

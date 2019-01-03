@@ -10,4 +10,4 @@ import { ListeAnnexe } from './listeAnnexe';
     IonicPageModule.forChild(ListeAnnexe),
   ],
 })
-export class LListeAnnexeModule {}
+export class ListeAnnexeModule {}
