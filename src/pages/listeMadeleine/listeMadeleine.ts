@@ -19,8 +19,8 @@ import { ListeSqlModelePage } from '../../tools/liste-sql-modele' ;
 })
 export class ListeMadeleine extends ListeSqlModelePage
 {
-  private rId: number ;
-  private rNom: string ;
+  private idM: number ;
+  //private image: string ;
 
   constructor(  public navCtrl: NavController, 
     public navParams: NavParams,
@@ -28,24 +28,24 @@ export class ListeMadeleine extends ListeSqlModelePage
   {
     super( new MoMadeleine(), FrmExposantPage, navCtrl, navParams, sqlPrd ) ;
 
-    this.rId = null ;
-    this.rNom = null ;
+    this.idM = null ;
+    //this.image = null ;
   }
 
   ngOnInit()
   {
-    this.select( "SELECT DISTINCT * FROM EXPOSANTS_18 order by nom", [] ) ;
+    this.select( "SELECT DISTINCT * FROM madeleine order by id", [] ) ;
   }
 
   onFiltre()
   {
     let where = "where 1=1" ;
 
-    if( this.rId ) where += " and id=" + this.rId ;
-    if( this.rNom ) where += " and nom like '%" + this.rNom + "%'" ;
+    if( this.idM ) where += " and id=" + this.idM ;
+    //if( this.rNom ) where += " and nom like '%" + this.rNom + "%'" ;
 
     this.liste = [] ;
-    this.select( "SELECT DISTINCT * FROM EXPOSANTS_18 " + where + " order by nom", [] ) ;
+    this.select( "SELECT DISTINCT * FROM madeleine " + where + " order by id", [] ) ;
   }
 
 }

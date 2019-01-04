@@ -29,7 +29,7 @@ export class ListeUser extends ListeFrmSqlModelePage
 
   ngOnInit()
   {
-    this.select( "SELECT * FROM UTILISATEURS_18 order by nom", [] ) ;
+    this.select( "SELECT * FROM user order by nom", [] ) ;
 
     //let sql = "select id, nom from EXPOSANTS_18 " ;
     //sql += " where id not in( select idExposant from UTILISATEURS_18)" ;

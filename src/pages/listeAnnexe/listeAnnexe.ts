@@ -19,8 +19,8 @@ import { ListeSqlModelePage } from '../../tools/liste-sql-modele' ;
 })
 export class ListeAnnexe extends ListeSqlModelePage
 {
-  private rId: number ;
-  private rNom: string ;
+  private idA: number ;
+  private annexe_mot: string ;
 
   constructor(  public navCtrl: NavController, 
     public navParams: NavParams,
@@ -28,24 +28,24 @@ export class ListeAnnexe extends ListeSqlModelePage
   {
     super( new MoAnnexe(), FrmExposantPage, navCtrl, navParams, sqlPrd ) ;
 
-    this.rId = null ;
-    this.rNom = null ;
+    this.idA = null ;
+    this.annexe_mot = null ;
   }
 
   ngOnInit()
   {
-    this.select( "SELECT DISTINCT * FROM EXPOSANTS_18 order by nom", [] ) ;
+    this.select( "SELECT DISTINCT * FROM annexe order by annexe_mot", [] ) ;
   }
 
   onFiltre()
   {
     let where = "where 1=1" ;
 
-    if( this.rId ) where += " and id=" + this.rId ;
-    if( this.rNom ) where += " and nom like '%" + this.rNom + "%'" ;
+    if( this.idA ) where += " and id=" + this.idA ;
+    if( this.annexe_mot ) where += " and mot like '%" + this.annexe_mot + "%'" ;
 
     this.liste = [] ;
-    this.select( "SELECT DISTINCT * FROM EXPOSANTS_18 " + where + " order by nom", [] ) ;
+    this.select( "SELECT DISTINCT * annexe " + where + " order by annexe_mot", [] ) ;
   }
 
 }

@@ -10,7 +10,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Liste des exposants</ion-title>
+    <ion-title>Liste des photos</ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="onNewItem()">
         <ion-icon name="add"></ion-icon>
@@ -26,11 +26,7 @@
     <div class="lavbox">
       <div class="lahbox">
         <label>Recherche par Identifiant:</label>
-        <input type="text" [(ngModel)]="rId" placeholder="n° identifiant" (change)="onFiltre()"/>      
-      </div>
-      <div class="lahbox">
-        <label>Recherche par nom:</label>
-        <input type="text" [(ngModel)]="rNom" placeholder="Nom" (change)="onFiltre()"/>      
+        <input type="text" [(ngModel)]="idP" placeholder="n° identifiant" (change)="onFiltre()"/>      
       </div>
     </div>
     <div class="lavbox">
@@ -42,7 +38,7 @@
     
   <ion-list>
     <button ion-item *ngFor="let e of liste" (click)="onSelectItem($event, e)">
-      <b>{{e.id}}</b> {{e.nom}} 
+      <b>{{e.id}}</b> 
     </button>
   </ion-list>
 
