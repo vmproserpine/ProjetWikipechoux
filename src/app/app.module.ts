@@ -13,6 +13,21 @@ import { SaisieLivrePage } from '../pages/saisie-livre/saisie-livre';
 import { ListeLivresPage } from '../pages/liste-livres/liste-livres' ;
 import { ListeRDVPage } from '../pages/ListeRDV/ListeRDV';
 import { SaisieRDVPage } from '../pages/saisie-RDV/saisieRDV';
+import { ListeAnnexe } from '../pages/listeAnnexe/listeAnnexe';
+import { ListeMadeleine } from '../pages/listeMadeleine/listeMadeleine';
+import { ListeMot } from '../pages/listeMot/listeMot';
+import { ListeThemes } from '../pages/listeThemes/listeThemes';
+import { ListeUser } from '../pages/listeUser/listeUser';
+import { ListeVideo } from '../pages/listeVideo/listeVideo';
+import { ListePhoto } from '../pages/listePhoto/listePhoto';
+import { AjoutAnnexe } from '../pages/ajoutAnnexe/ajoutAnnexe';
+import { AjoutMadeleine } from '../pages/ajoutMadeleine/ajoutMadeleine';
+import { AjoutMot } from '../pages/ajoutMot/ajoutMot';
+import { AjoutPhoto } from '../pages/ajoutPhoto/ajoutPhoto';
+import { AjoutThemes } from '../pages/ajoutThemes/ajoutThemes';
+import { AjoutUser } from '../pages/ajoutUser/ajoutUser';
+import { AjoutVideo } from '../pages/ajoutVideo/ajoutVideo';
+
 
 import { ListeFrmSqlModeleComponent } from '../components/liste-frm-sql-modele/liste-frm-sql-modele' ;
 import { ListeFrmLineComponent } from '../components/liste-frm-line/liste-frm-line' ;
@@ -34,20 +49,7 @@ import { JetonDeConnectionProvider } from '../providers/jeton-de-connection/jeto
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { ListeAnnexe } from '../pages/listeAnnexe/listeAnnexe';
-import { ListeMadeleine } from '../pages/listeMadeleine/listeMadeleine';
-import { ListeMot } from '../pages/listeMot/listeMot';
-import { ListeThemes } from '../pages/listeThemes/listeThemes';
-import { ListeUser } from '../pages/listeUser/listeUser';
-import { ListeVideo } from '../pages/listeVideo/listeVideo';
-import { ListePhoto } from '../pages/listePhoto/listePhoto';
-import { AjoutAnnexe } from '../pages/ajoutAnnexe/ajoutAnnexe';
-import { AjoutMadeleine } from '../pages/ajoutMadeleine/ajoutMadeleine';
-import { AjoutMot } from '../pages/ajoutMot/ajoutMot';
-import { AjoutPhoto } from '../pages/ajoutPhoto/ajoutPhoto';
-import { AjoutThemes } from '../pages/ajoutThemes/ajoutThemes';
-import { AjoutUser } from '../pages/ajoutUser/ajoutUser';
-import { AjoutVideo } from '../pages/ajoutVideo/ajoutVideo';
+
 
 @NgModule({
   declarations: [
