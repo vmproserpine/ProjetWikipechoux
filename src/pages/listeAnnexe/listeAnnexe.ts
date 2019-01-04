@@ -45,7 +45,7 @@ export class ListeAnnexe extends ListeSqlModelePage
     if( this.annexe_mot ) where += " and mot like '%" + this.annexe_mot + "%'" ;
 
     this.liste = [] ;
-    this.select( "SELECT DISTINCT * annexe " + where + " order by annexe_mot", [] ) ;
+    this.select( "SELECT DISTINCT * FROM annexe " + where + " order by annexe_mot", [] ) ;
   }
 
 }
