@@ -34,7 +34,7 @@ export class ListeMot extends ListeSqlModelePage
 
   ngOnInit()
   {
-    this.select( "SELECT DISTINCT * FROM mot order by nomM", [] ) ;
+    this.select( "SELECT DISTINCT * FROM mot order by nom_mot", [] ) ;
   }
 
   onFiltre()
@@ -42,10 +42,10 @@ export class ListeMot extends ListeSqlModelePage
     let where = "where 1=1" ;
 
     if( this.idMot ) where += " and id=" + this.idMot ;
-    if( this.nom_mot ) where += " and nomM like '%" + this.nom_mot + "%'" ;
+    if( this.nom_mot ) where += " and nom_mot like '%" + this.nom_mot + "%'" ;
 
     this.liste = [] ;
-    this.select( "SELECT DISTINCT * FROM mot " + where + " order by nomM", [] ) ;
+    this.select( "SELECT DISTINCT * FROM mot " + where + " order by nom_mot", [] ) ;
   }
 
 }

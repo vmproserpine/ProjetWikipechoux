@@ -28,10 +28,6 @@
         <label>Recherche par Identifiant:</label>
         <input type="text" [(ngModel)]="idV" placeholder="n° identifiant" (change)="onFiltre()"/>      
       </div>
-      <div class="lahbox">
-        <label>Recherche par nom:</label>
-        <input type="text" [(ngModel)]="nom_video" placeholder="Nom" (change)="onFiltre()"/>      
-      </div>
     </div>
     <div class="lavbox">
       <div class="lahbox">
@@ -42,7 +38,7 @@
     
   <ion-list>
     <button ion-item *ngFor="let e of liste" (click)="onSelectItem($event, e)">
-      <b>{{e.id}}</b> {{e.nomV}} 
+      <b>{{e.id}}</b> 
     </button>
   </ion-list>
 

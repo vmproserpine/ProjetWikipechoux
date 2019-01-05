@@ -34,7 +34,7 @@ export class ListeAnnexe extends ListeSqlModelePage
 
   ngOnInit()
   {
-    this.select( "SELECT DISTINCT * FROM annexe order by annexe_mot", [] ) ;
+    this.select( "SELECT * FROM annexe order by annexe_mot", [] ) ;
   }
 
   onFiltre()
@@ -42,7 +42,7 @@ export class ListeAnnexe extends ListeSqlModelePage
     let where = "where 1=1" ;
 
     if( this.idA ) where += " and id=" + this.idA ;
-    if( this.annexe_mot ) where += " and mot like '%" + this.annexe_mot + "%'" ;
+    if( this.annexe_mot ) where += " and annexe_mot like '%" + this.annexe_mot + "%'" ;
 
     this.liste = [] ;
     this.select( "SELECT DISTINCT * FROM annexe " + where + " order by annexe_mot", [] ) ;

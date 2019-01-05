@@ -34,7 +34,7 @@ export class ListeThemes extends ListeSqlModelePage
 
   ngOnInit()
   {
-    this.select( "SELECT DISTINCT * FROM theme order by nomT", [] ) ;
+    this.select( "SELECT DISTINCT * FROM theme order by nom_theme", [] ) ;
   }
 
   onFiltre()
@@ -42,10 +42,10 @@ export class ListeThemes extends ListeSqlModelePage
     let where = "where 1=1" ;
 
     if( this.idT ) where += " and id=" + this.idT ;
-    if( this.nom_theme ) where += " and nomT like '%" + this.nom_theme + "%'" ;
+    if( this.nom_theme ) where += " and nom_theme like '%" + this.nom_theme + "%'" ;
 
     this.liste = [] ;
-    this.select( "SELECT DISTINCT * FROM theme " + where + " order by nomT", [] ) ;
+    this.select( "SELECT DISTINCT * FROM theme " + where + " order by nom_theme", [] ) ;
   }
 
 }

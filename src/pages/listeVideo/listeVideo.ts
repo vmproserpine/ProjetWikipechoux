@@ -29,12 +29,12 @@ export class ListeVideo extends ListeSqlModelePage
     super( new MoVideo(), FrmExposantPage, navCtrl, navParams, sqlPrd ) ;
 
     this.idV = null ;
-    this.nom_video = null ;
+    // this.nom_video = null ;
   }
 
   ngOnInit()
   {
-    this.select( "SELECT DISTINCT * FROM video order by nomV", [] ) ;
+    this.select( "SELECT DISTINCT * FROM video order by id", [] ) ;
   }
 
   onFiltre()
@@ -42,10 +42,10 @@ export class ListeVideo extends ListeSqlModelePage
     let where = "where 1=1" ;
 
     if( this.idV ) where += " and id=" + this.idV ;
-    if( this.nom_video ) where += " and nomV like '%" + this.nom_video + "%'" ;
+    //if( this.nom_video ) where += " and nom_video like '%" + this.nom_video + "%'" ;
 
     this.liste = [] ;
-    this.select( "SELECT DISTINCT * FROM video " + where + " order by nomV", [] ) ;
+    this.select( "SELECT DISTINCT * FROM video " + where + " order by id", [] ) ;
   }
 
 }

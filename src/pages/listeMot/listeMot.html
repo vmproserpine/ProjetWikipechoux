@@ -30,7 +30,7 @@
       </div>
       <div class="lahbox">
         <label>Recherche par nom:</label>
-        <input type="text" [(ngModel)]="nomM" placeholder="Nom du mot" (change)="onFiltre()"/>      
+        <input type="text" [(ngModel)]="nom_mot" placeholder="Nom du mot" (change)="onFiltre()"/>      
       </div>
     </div>
     <div class="lavbox">
@@ -42,7 +42,7 @@
     
   <ion-list>
     <button ion-item *ngFor="let e of liste" (click)="onSelectItem($event, e)">
-      <b>{{e.id}}</b> {{e.nomM}} 
+      <b>{{e.id}}</b> &nbsp; &nbsp; {{e.nom_mot}} 
     </button>
   </ion-list>
 
