@@ -23,9 +23,13 @@
     "@ionic-native/core": "^4.17.0",
     "@ionic-native/splash-screen": "^4.17.0",
     "@ionic-native/status-bar": "^4.17.0",
+    "@ionic-native/video-editor": "^4.19.0",
+    "@ionic-native/video-player": "^4.19.0",
     "@ionic/storage": "2.2.0",
     "cordova-plugin-splashscreen": "5.0.2",
     "cordova-plugin-statusbar": "2.4.2",
+    "cordova-plugin-video-editor": "1.1.3",
+    "cordova-plugin-video-player": "1.0.1",
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
     "rxjs": "5.5.11",
@@ -40,7 +44,9 @@
   "cordova": {
     "plugins": {
       "cordova-plugin-statusbar": {},
-      "cordova-plugin-splashscreen": {}
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-video-editor": {},
+      "com.moust.cordova.videoplayer": {}
     }
   }
 }

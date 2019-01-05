@@ -20,7 +20,7 @@ import { ListeSqlModelePage } from '../../tools/liste-sql-modele' ;
 export class ListeMadeleine extends ListeSqlModelePage
 {
   private idM: number ;
-  //private image: string ;
+  private image: string ;
 
   constructor(  public navCtrl: NavController, 
     public navParams: NavParams,
@@ -29,7 +29,7 @@ export class ListeMadeleine extends ListeSqlModelePage
     super( new MoMadeleine(), FrmExposantPage, navCtrl, navParams, sqlPrd ) ;
 
     this.idM = null ;
-    //this.image = null ;
+    this.image = null ;
   }
 
   ngOnInit()

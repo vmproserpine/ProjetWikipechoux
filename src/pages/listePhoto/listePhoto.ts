@@ -20,7 +20,7 @@ import { ListeSqlModelePage } from '../../tools/liste-sql-modele' ;
 export class ListePhoto extends ListeSqlModelePage
 {
   private idP: number ;
-  //private rNom: string ;
+  private nom_photo: string ;
 
   constructor(  public navCtrl: NavController, 
     public navParams: NavParams,
@@ -29,12 +29,12 @@ export class ListePhoto extends ListeSqlModelePage
     super( new MoPhoto(), FrmExposantPage, navCtrl, navParams, sqlPrd ) ;
 
     this.idP = null ;
-    //this.rNom = null ;
+    this.nom_photo = null ;
   }
 
   ngOnInit()
   {
-    this.select( "SELECT DISTINCT * FROM photo order by nom", [] ) ;
+    this.select( "SELECT DISTINCT * FROM photo order by id", [] ) ;
   }
 
   onFiltre()
@@ -45,7 +45,7 @@ export class ListePhoto extends ListeSqlModelePage
     //if( this.rNom ) where += " and nom like '%" + this.rNom + "%'" ;
 
     this.liste = [] ;
-    this.select( "SELECT DISTINCT * FROM photo " + where + " order by nom", [] ) ;
+    this.select( "SELECT DISTINCT * FROM photo " + where + " order by id", [] ) ;
   }
 
 }

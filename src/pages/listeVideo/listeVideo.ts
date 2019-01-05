@@ -4,6 +4,7 @@ import { RemoteSqlProvider } from '../../providers/remotesql/remotesql';
 import { MoVideo } from '../../metiers/MoVideo' ;
 import { FrmExposantPage } from '../frm-exposant/frm-exposant' ;
 import { ListeSqlModelePage } from '../../tools/liste-sql-modele' ;
+import { VideoPlayer, VideoOptions } from '@ionic-native/video-player';
 
 /**
  * Generated class for the ListeEquipementsPage page.
@@ -21,15 +22,17 @@ export class ListeVideo extends ListeSqlModelePage
 {
   private idV: number ;
   private nom_video: string ;
+  videoOpts : VideoOptions
 
   constructor(  public navCtrl: NavController, 
     public navParams: NavParams,
-    public sqlPrd: RemoteSqlProvider) 
+    public sqlPrd: RemoteSqlProvider,
+    private videoPlayer : VideoPlayer) 
   {
     super( new MoVideo(), FrmExposantPage, navCtrl, navParams, sqlPrd ) ;
 
     this.idV = null ;
-    // this.nom_video = null ;
+    this.nom_video = null ;
   }
 
   ngOnInit()
@@ -47,5 +50,17 @@ export class ListeVideo extends ListeSqlModelePage
     this.liste = [] ;
     this.select( "SELECT DISTINCT * FROM video " + where + " order by id", [] ) ;
   }
+
+  public playVideo(){
+    this.videoOpts = {volume : 1.0};
+    this.videoPlayer.play(this.nom_video).then(() => {
+    console.log('video completed');
+    }).catch(err => {
+    console.log(err);
+    });    
+}
+public stopPlayingVideo(){
+    this.videoPlayer.close();
+}
 
 }

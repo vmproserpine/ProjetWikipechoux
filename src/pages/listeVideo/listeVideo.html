@@ -38,7 +38,12 @@
     
   <ion-list>
     <button ion-item *ngFor="let e of liste" (click)="onSelectItem($event, e)">
-      <b>{{e.id}}</b> 
+      <b>{{e.id}}</b> &nbsp; &nbsp;
+      <video width="300" height="122" controls="controls">
+        <source src="e.nom_video" />
+      </video>
+      <button ion-button (click)="playVideo()">Lecture</button>
+      <button ion-button (click)="stopPlayingVideo()">Arrêt</button>
     </button>
   </ion-list>
 

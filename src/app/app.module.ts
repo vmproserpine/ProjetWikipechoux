@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { CUSTOM_ELEMENTS_SCHEMA }  from '@angular/core';
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { VideoPlayer } from '@ionic-native/video-player';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -46,8 +49,7 @@ import { UploadImage } from '../components/upload-image/upload-image' ;
 import { RemoteSqlProvider } from '../providers/remotesql/remotesql';
 import { JetonDeConnectionProvider } from '../providers/jeton-de-connection/jeton-de-connection' ;
 
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+
 
 
 @NgModule({
@@ -123,6 +125,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    VideoPlayer,
     RemoteSqlProvider,
     JetonDeConnectionProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
