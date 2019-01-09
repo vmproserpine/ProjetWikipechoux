@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RemoteSqlProvider } from '../../providers/remotesql/remotesql';
 import { MoPhoto } from '../../metiers/MoPhoto' ;
-import { FrmExposantPage } from '../frm-exposant/frm-exposant' ;
+import {AjoutPhoto} from '../ajoutPhoto/ajoutPhoto' ;
 import { ListeSqlModelePage } from '../../tools/liste-sql-modele' ;
 
 /**
@@ -26,7 +26,7 @@ export class ListePhoto extends ListeSqlModelePage
     public navParams: NavParams,
     public sqlPrd: RemoteSqlProvider) 
   {
-    super( new MoPhoto(), FrmExposantPage, navCtrl, navParams, sqlPrd ) ;
+    super( new MoPhoto(), AjoutPhoto, navCtrl, navParams, sqlPrd ) ;
 
     this.idP = null ;
     this.nom_photo = null ;

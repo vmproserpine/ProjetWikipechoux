@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RemoteSqlProvider } from '../../providers/remotesql/remotesql';
 import { MoMadeleine } from '../../metiers/MoMadeleine' ;
-import { FrmExposantPage } from '../frm-exposant/frm-exposant' ;
+import {AjoutMadeleine} from '../ajoutMadeleine/ajoutMadeleine' ;
 import { ListeSqlModelePage } from '../../tools/liste-sql-modele' ;
 
 /**
@@ -26,7 +26,7 @@ export class ListeMadeleine extends ListeSqlModelePage
     public navParams: NavParams,
     public sqlPrd: RemoteSqlProvider) 
   {
-    super( new MoMadeleine(), FrmExposantPage, navCtrl, navParams, sqlPrd ) ;
+    super( new MoMadeleine(), AjoutMadeleine, navCtrl, navParams, sqlPrd ) ;
 
     this.idM = null ;
     this.image = null ;

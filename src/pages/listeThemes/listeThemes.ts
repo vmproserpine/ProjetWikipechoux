@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RemoteSqlProvider } from '../../providers/remotesql/remotesql';
 import { MoThemes } from '../../metiers/MoThemes' ;
-import { FrmExposantPage } from '../frm-exposant/frm-exposant' ;
+import {AjoutThemes} from '../ajoutThemes/ajoutThemes' ;
 import { ListeSqlModelePage } from '../../tools/liste-sql-modele' ;
 
 /**
@@ -26,7 +26,7 @@ export class ListeThemes extends ListeSqlModelePage
     public navParams: NavParams,
     public sqlPrd: RemoteSqlProvider) 
   {
-    super( new MoThemes(), FrmExposantPage, navCtrl, navParams, sqlPrd ) ;
+    super( new MoThemes(), AjoutThemes, navCtrl, navParams, sqlPrd ) ;
 
     this.idT = null ;
     this.nom_theme = null ;

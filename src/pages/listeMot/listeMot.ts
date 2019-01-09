@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RemoteSqlProvider } from '../../providers/remotesql/remotesql';
 import { MoMot } from '../../metiers/MoMot' ;
-import { FrmExposantPage } from '../frm-exposant/frm-exposant' ;
+import {AjoutMot} from '../ajoutMot/ajoutMot' ;
 import { ListeSqlModelePage } from '../../tools/liste-sql-modele' ;
 
 /**
@@ -26,7 +26,7 @@ export class ListeMot extends ListeSqlModelePage
     public navParams: NavParams,
     public sqlPrd: RemoteSqlProvider) 
   {
-    super( new MoMot (), FrmExposantPage, navCtrl, navParams, sqlPrd ) ;
+    super( new MoMot (), AjoutMot, navCtrl, navParams, sqlPrd ) ;
 
     this.idMot = null ;
     this.nom_mot = null ;

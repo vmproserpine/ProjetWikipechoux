@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RemoteSqlProvider } from '../../providers/remotesql/remotesql';
 import { MoVideo } from '../../metiers/MoVideo' ;
-import { FrmExposantPage } from '../frm-exposant/frm-exposant' ;
+import {AjoutVideo} from '../ajoutVideo/ajoutVideo' ;
 import { ListeSqlModelePage } from '../../tools/liste-sql-modele' ;
 import { VideoPlayer, VideoOptions } from '@ionic-native/video-player';
 
@@ -29,7 +29,7 @@ export class ListeVideo extends ListeSqlModelePage
     public sqlPrd: RemoteSqlProvider,
     private videoPlayer : VideoPlayer) 
   {
-    super( new MoVideo(), FrmExposantPage, navCtrl, navParams, sqlPrd ) ;
+    super( new MoVideo(), AjoutVideo, navCtrl, navParams, sqlPrd ) ;
 
     this.idV = null ;
     this.nom_video = null ;
