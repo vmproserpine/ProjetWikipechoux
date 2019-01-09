@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RemoteSqlProvider } from '../../providers/remotesql/remotesql';
 import { MoAnnexe } from '../../metiers/MoAnnexe' ;
-import { FrmExposantPage } from '../frm-exposant/frm-exposant' ;
 import { ListeSqlModelePage } from '../../tools/liste-sql-modele' ;
+import {AjoutAnnexe} from '../ajoutAnnexe/ajoutAnnexe' ;
 
 /**
  * Generated class for the ListeEquipementsPage page.
@@ -26,7 +26,7 @@ export class ListeAnnexe extends ListeSqlModelePage
     public navParams: NavParams,
     public sqlPrd: RemoteSqlProvider) 
   {
-    super( new MoAnnexe(), FrmExposantPage, navCtrl, navParams, sqlPrd ) ;
+    super( new MoAnnexe(), AjoutAnnexe, navCtrl, navParams, sqlPrd ) ;
 
     this.idA = null ;
     this.annexe_mot = null ;
