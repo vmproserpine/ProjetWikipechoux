@@ -38,7 +38,7 @@
     
   <ion-list>
     <button ion-item *ngFor="let e of liste" (click)="onSelectItem($event, e)">
-      <b>{{e.id}}</b> &nbsp; &nbsp; <ion-img style="width: 140px; height: 140px;" src="e.image"></ion-img>
+      <b>{{e.id}}</b> &nbsp; &nbsp; <img style="width: 140px; height: 140px;" src="img/madeleines/{{e.image}}">
     </button>
   </ion-list>
 
