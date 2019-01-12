@@ -4,9 +4,6 @@ import { ToastController } from 'ionic-angular';
 import { RemoteSqlProvider } from '../../providers/remotesql/remotesql'; 
 import { ListeSqlModelePage } from '../../tools/liste-sql-modele' ;
 
-import { MoLivre } from '../../metiers/MoLivre' ;
-import { MoTheme } from '../../metiers/MoTheme' ;
-import { MoTrancheAge } from '../../metiers/MoTrancheAge' ;
 import { MoMot } from '../../metiers/MoMot' ;
 
 import { FrmSqlModelePage } from '../../tools/frm-sql_modele' ;
@@ -19,11 +16,10 @@ import { FrmSqlModelePage } from '../../tools/frm-sql_modele' ;
 
 export class AjoutMot extends FrmSqlModelePage
 {
-    @Input() private idExposant:    number ;
+    @Input() private idMot:    number ;
 
-    public object:    MoLivre;
-    public tranchesAge: Array<{id: number, libelle: string}> ;
-    public themes: Array<{id: number, libelle: string}> ;
+    public object:    MoMot;
+    public theme: Array<{id: number, nom_theme: string}> ;
 
     constructor(
         public navCtrl: NavController,
@@ -31,12 +27,9 @@ export class AjoutMot extends FrmSqlModelePage
         public toastCtrl: ToastController,
         public sqlPrd: RemoteSqlProvider  )
         {
-            super( navCtrl, navParams, sqlPrd, toastCtrl, new MoLivre() )
+            super( navCtrl, navParams, sqlPrd, toastCtrl, new MoMot() )       
 
-            this.tranchesAge = [] ;
-            this.sqlPrd.select( "select id, libelle from trancheage_18 order by id", [], this.tranchesAge ) ;        
-
-            this.themes = [] ;
-            this.sqlPrd.select( "select id, libelle from theme_18 order by libelle", [], this.themes ) ;        
+            this.theme = [] ;
+            this.sqlPrd.select( "select id, nom_theme from theme order by nom_theme", [], this.theme ) ;        
         }
 }

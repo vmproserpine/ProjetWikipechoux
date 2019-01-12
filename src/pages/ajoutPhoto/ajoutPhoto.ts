@@ -19,11 +19,10 @@ import { FrmSqlModelePage } from '../../tools/frm-sql_modele' ;
 
 export class AjoutPhoto extends FrmSqlModelePage
 {
-    @Input() private idExposant:    number ;
+    @Input() private idP:    number ;
 
-    public object:    MoLivre;
-    public tranchesAge: Array<{id: number, libelle: string}> ;
-    public themes: Array<{id: number, libelle: string}> ;
+    public object:    MoPhoto;
+    public mot: Array<{id: number, nom_mot: string}> ;
 
     constructor(
         public navCtrl: NavController,
@@ -31,12 +30,8 @@ export class AjoutPhoto extends FrmSqlModelePage
         public toastCtrl: ToastController,
         public sqlPrd: RemoteSqlProvider  )
         {
-            super( navCtrl, navParams, sqlPrd, toastCtrl, new MoLivre() )
-
-            this.tranchesAge = [] ;
-            this.sqlPrd.select( "select id, libelle from trancheage_18 order by id", [], this.tranchesAge ) ;        
-
-            this.themes = [] ;
-            this.sqlPrd.select( "select id, libelle from theme_18 order by libelle", [], this.themes ) ;        
+            super( navCtrl, navParams, sqlPrd, toastCtrl, new MoPhoto() )        
+            this.mot = [] ;
+            this.sqlPrd.select( "select id, nom_mot from mot order by nom_mot", [], this.mot ) ;        
         }
 }

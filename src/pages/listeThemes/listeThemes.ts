@@ -19,7 +19,7 @@ import { ListeSqlModelePage } from '../../tools/liste-sql-modele' ;
 })
 export class ListeThemes extends ListeSqlModelePage
 {
-  private idT: number ;
+  private idT: number ; 
   private nom_theme: string ;
 
   constructor(  public navCtrl: NavController, 

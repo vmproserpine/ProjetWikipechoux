@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Mise à jour du livre n° {{object.id}} {{object.titre}}</ion-title>
+    <ion-title>Mise à jour de la madeleine n° {{object.id}} </ion-title>
   </ion-navbar>
 </ion-header>
  
@@ -8,50 +8,18 @@
 <ion-content padding>
   <ion-list>
     <ion-item>
-      <ion-label color="primary">Titre du livre:</ion-label>
-      <ion-input [(ngModel)]="object.titre">{{leTitre}}</ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label color="primary">Auteur du livre:</ion-label>
-      <ion-input [(ngModel)]="object.auteur">{{leAuteur}}</ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label color="primary">Editeur du livre:</ion-label>
-      <ion-input [(ngModel)]="object.editeur">{{leEditeur}}</ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label color="primary">Tranche d'âge:</ion-label>
-      <ion-select [(ngModel)]="object.idTrancheAge">
-        <ion-option *ngFor="let t of tranchesAge" value={{t.id}}>
-          {{t.libelle}}
-        </ion-option>
-      </ion-select>
-    </ion-item> 
-    <ion-item>
-      <ion-label color="primary">Thème:</ion-label>
-      <ion-select [(ngModel)]="object.idTheme">
-        <ion-option *ngFor="let t of themes" value={{t.id}}>
-          {{t.libelle}}
-        </ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label color="primary">Commentaire: </ion-label>
-      <ion-textarea rows="5" [(ngModel)]="object.commentaire" (input)="change()">{{leResume}}</ion-textarea>
-    </ion-item>
-    <ion-item>
-      <ion-label color="primary">Résumé du livre: </ion-label>
-      <ion-textarea rows="5" [(ngModel)]="object.enResume" (input)="change()">{{leResume}}</ion-textarea>
+      <ion-label color="primary">Libelle de la madeleine:</ion-label>
+      <ion-input [(ngModel)]="object.libelle">{{laMadeleine}}</ion-input>
     </ion-item>
     <ion-item>
       <upload-image 
         [show-size-list]="'false'" 
-        [(imageUrl)]="object.image"
+        [(imageUrl)]="object.imgage"
         [uploadSrvUrl]="'http://www.lcs.alsace/flc/php/'"
         [imageSize]=300
-        [imageDirectory]="'../images'"></upload-image>
+        [imageDirectory]="'..img/madeleines/'"></upload-image>
       <p *ngIf="object.image">
-        <img src={{object.image}}>
+        <img style="width: 140px; height: 140px;" src="img/madeleines/{{object.image}}">
       </p>  
     </ion-item>
   </ion-list>
