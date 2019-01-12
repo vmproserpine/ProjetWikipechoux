@@ -45,7 +45,7 @@ export class ListeVideo extends ListeSqlModelePage
     let where = "where 1=1" ;
 
     if( this.idV ) where += " and id=" + this.idV ;
-    //if( this.nom_video ) where += " and nom_video like '%" + this.nom_video + "%'" ;
+    if( this.nom_video ) where += " and nom_video like '%" + this.nom_video + "%'" ;
 
     this.liste = [] ;
     this.select( "SELECT DISTINCT * FROM video " + where + " order by id", [] ) ;

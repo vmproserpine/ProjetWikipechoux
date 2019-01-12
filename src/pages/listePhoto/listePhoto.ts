@@ -42,7 +42,7 @@ export class ListePhoto extends ListeSqlModelePage
     let where = "where 1=1" ;
 
     if( this.idP ) where += " and id=" + this.idP ;
-    //if( this.rNom ) where += " and nom like '%" + this.rNom + "%'" ;
+    if( this.nom_photo ) where += " and nom_photo like '%" + this.nom_photo + "%'" ;
 
     this.liste = [] ;
     this.select( "SELECT DISTINCT * FROM photo " + where + " order by id", [] ) ;
