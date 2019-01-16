@@ -41,14 +41,13 @@
     </div>
   </ion-card>  
   <ion-list>
-    <button ion-item *ngFor="let e of liste" >
+    <ion-item ion-item *ngFor="let e of liste" >
       <b>{{e.id}}</b> &nbsp; &nbsp;
-      <video width="300" height="122" controls="controls">
-        <source src="img/mots/films/{{e.nom_video}}" />
+      <video width="300" height="122" controls>
+        <source src="img/mots/films/{{e.nom_video}}" type="video/mp4"/>
       </video>
-      <button ion-button (click)="playVideo()">Lecture</button>
-      <button ion-button (click)="stopPlayingVideo()">Arrêt</button>
-    </button>
+      <button ion-button (click)="onSelectItem($event, e)">Modifier</button>
+    </ion-item>
   </ion-list>
 
 </ion-content>

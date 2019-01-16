@@ -51,7 +51,7 @@ export class ListeVideo extends ListeSqlModelePage
     this.select( "SELECT DISTINCT * FROM video " + where + " order by id", [] ) ;
   }
 
-  public playVideo(){
+  /*public playVideo(){
     this.videoOpts = {volume : 1.0};
     this.videoPlayer.play(this.nom_video).then(() => {
     console.log('video completed');
@@ -61,6 +61,6 @@ export class ListeVideo extends ListeSqlModelePage
 }
 public stopPlayingVideo(){
     this.videoPlayer.close();
-}
+}*/
 
 }
