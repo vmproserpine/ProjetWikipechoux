@@ -11,6 +11,7 @@ import { ListeMot } from '../pages/listeMot/listeMot';
 import { ListePhoto } from '../pages/listePhoto/listePhoto';
 import { ListeThemes } from '../pages/listeThemes/listeThemes';
 import { ListeVideo } from '../pages/listeVideo/listeVideo';
+import { ListeUser } from '../pages/listeUser/listeUser';
 
 @Component({
   templateUrl: 'app.html'
@@ -34,6 +35,7 @@ export class MyApp {
       { title: 'Mots', component: ListeMot },
       { title: 'Photos', component: ListePhoto },
       { title: 'Themes', component: ListeThemes },
+      { title: 'Utilisateurs', component: ListeUser },
       { title: 'Videos', component: ListeVideo }
     ];
 
