@@ -7,49 +7,49 @@ import 'rxjs/add/operator/map';
 export class JetonDeConnectionProvider 
 {
   private connected: boolean ;
-  private compte: string ;
-  private nom: string ;
-  private privilege: number ;
+  //private compte: string ;
+  private login: string ;
+  //private privilege: number ;
   private id: number ;
-  private idExposant: number ;
+  //private idExposant: number ;
 
   constructor( public sqlPrd: RemoteSqlProvider ) 
   {
     this.connected = false ;
-    this.compte = null ;
-    this.nom = null ;
-    this.privilege = 0 ;
+    //this.compte = null ;
+    this.login = null ;
+    //this.privilege = 0 ;
     this.id = null ;
-    this.idExposant = null ;
+    // this.idExposant = null ;
   }
 
-  getPrivilege() : number
+  /*getPrivilege() : number
   {
     return this.privilege ;
-  }
+  }*/
 
   getNom(): string
   {
-    return this.nom ;
+    return this.login ;
   }
 
-  getIdExposant(): number
+  /*getIdExposant(): number
   {
     return this.idExposant ;
-  }
+  }*/
 
-  connect( compte: string, password: string ): Promise<any>
+  connect( login: string, mdp: string ): Promise<any>
   {
-    return this.sqlPrd.select( "select nom, privilege, id, idExposant from UTILISATEURS_18 where compte=? and mdp=?",
-      [compte,password] ).then( (data)=>
+    return this.sqlPrd.select( "select login, id_user from user where login=? and mdp=?",
+      [login,mdp] ).then( (data)=>
       {
         if( data.rows.length > 0 )
         {
-          this.compte = compte ;
-          this.nom = data.rows[0].nom ;
-          this.privilege = parseInt( data.rows[0].privilege ) ;
+          //this.compte = compte ;
+          this.login = data.rows[0].login ;
+          //this.privilege = parseInt( data.rows[0].privilege ) ;
           this.id = parseInt( data.rows[0].id ) ;
-          this.idExposant = parseInt( data.rows[0].idExposant ) ;
+          //this.idExposant = parseInt( data.rows[0].idExposant ) ;
           this.connected = true ;
           return true ;
         }
@@ -59,11 +59,11 @@ export class JetonDeConnectionProvider
 
   unConnect()
   {
-    this.compte = null ;
-    this.nom = null ;
-    this.privilege = null ;
+    //this.compte = null ;
+    this.login = null ;
+    //this.privilege = null ;
     this.id = null ;
-    this.idExposant = null ;
+    //this.idExposant = null ;
     this.connected = false ;
   }
 

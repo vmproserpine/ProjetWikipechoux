@@ -9,7 +9,7 @@
   <ion-list>
     <ion-item>
       <ion-label color="primary">Libelle de la madeleine:</ion-label>
-      <ion-input [(ngModel)]="object.libelle">{{laMadeleine}}</ion-input>
+      <ion-textarea rows ="5" value [(ngModel)]= "object.libelle" class = "input input-md" autocorrect ="on" style></ion-textarea> 
     </ion-item>
     <ion-item>
       <upload-image 

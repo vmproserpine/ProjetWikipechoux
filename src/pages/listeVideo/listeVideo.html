@@ -43,11 +43,10 @@
   <ion-list>
     <ion-item ion-item *ngFor="let e of liste" >
       <b>{{e.id}}</b> &nbsp; &nbsp;
-      <video width="300" height="122" controls>
+      <video controls width="300" height="122" >
         <source src="img/mots/films/{{e.nom_video}}" type="video/mp4"/>
       </video>
       <button ion-button (click)="onSelectItem($event, e)">Modifier</button>
     </ion-item>
   </ion-list>
-
 </ion-content>

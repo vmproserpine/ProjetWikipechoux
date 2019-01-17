@@ -13,7 +13,7 @@
     </ion-item>
     <ion-item>
       <ion-label color="primary">Définition apportée au mot:</ion-label>
-      <ion-input [(ngModel)]="object.annexe_def">{{leAuteur}}</ion-input>
+      <ion-textarea rows ="5" value [(ngModel)]="object.annexe_def" class = "input input-md" autocorrect ="on" style></ion-textarea>
     </ion-item>
   </ion-list>
   <button ion-button (click)="onCancel()">Annuler</button>

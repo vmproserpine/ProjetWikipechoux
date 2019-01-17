@@ -20,26 +20,12 @@
           <tab-bt-cancel [object]="object"></tab-bt-cancel>
           <tab-bt-remove title="Supprimer" [object]="object" [liste]="liste"></tab-bt-remove>
         </tab-line-selector>
-        <tab-cell title="N°">{{object.id}}</tab-cell>
+        <tab-cell title="N°">{{object.id_user}}</tab-cell>
         <tab-cell title="Nom">
-          <input type="text" size=30 [(ngModel)]="object.nom">
-        </tab-cell>
-        <tab-cell title="Privilège">
-          <select [(ngModel)]="object.privilege">
-            <option value="0">Inactif</option>
-            <option value="1">Exposant</option>
-            <option value="10">Organisation</option>
-            <option value="20">Admin</option>
-          </select>
-        </tab-cell>
-        <tab-cell title="Compte">
-            <input type="text" size=20 [(ngModel)]="object.compte">
+          <input type="text" size=30 [(ngModel)]="object.login">
         </tab-cell>
         <tab-cell title="Mot de passe">
           <input type="text" size=20 [(ngModel)]="object.mdp">
-        </tab-cell>
-        <tab-cell title="Exposant">
-          <input type="number" [(ngModel)]="object.idExposant">
         </tab-cell>
       </tab-row>
     </tab-form>
