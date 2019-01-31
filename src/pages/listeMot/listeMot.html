@@ -43,8 +43,8 @@
     
   <ion-list>
     <button ion-item *ngFor="let e of liste" (click)="onSelectItem($event, e)">
-      <b>{{e.id}}</b> &nbsp; &nbsp; {{e.nom_mot}} 
-      <p><b><span style="border:1px solid black;padding:1%">{{e.date_creation}}</span> </b></p>
+      <b>{{e.id}}</b> &nbsp; &nbsp; {{e.nom_mot}}
+      <p><b><span style="border:1px solid black;padding:1%">{{e.date_creation.toLocaleString()}}  </span> </b></p>
     </button>
   </ion-list>
 

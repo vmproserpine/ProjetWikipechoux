@@ -40,10 +40,10 @@ export class HomePage
       }) ;
       toast.present() ;
 
-      if( this.jetonConnect.getIdExposant() )
+      /*if( this.jetonConnect.getIdExposant() )
       {
         this.navCtrl.push( FrmExposantPage, { pk: {id: this.jetonConnect.getIdExposant() } } ) ;
-      }
+      }*/
     }) ;
   }
 }

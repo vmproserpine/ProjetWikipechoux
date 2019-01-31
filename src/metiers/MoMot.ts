@@ -10,6 +10,8 @@ export class MoMot extends MoSqlTable
 
   constructor( data: any = null ) 
   {
+    if( data ) data.date_creation = new Date( data.date_creation ) ;
+
     super( (data)? data : {
         id: null,
         nom_mot: null,

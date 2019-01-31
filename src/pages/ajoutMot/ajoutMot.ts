@@ -3,6 +3,8 @@ import { NavController, NavParams } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 import { RemoteSqlProvider } from '../../providers/remotesql/remotesql'; 
 import { ListeSqlModelePage } from '../../tools/liste-sql-modele' ;
+import { DatePicker } from '@ionic-native/date-picker/ngx';
+
 
 import { MoMot } from '../../metiers/MoMot' ;
 
