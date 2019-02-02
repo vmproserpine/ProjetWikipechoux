@@ -5,7 +5,7 @@ import { MoMot } from '../../metiers/MoMot' ;
 import {MAJMOT} from '../majMot/majMot' ;
 import { ListeSqlModelePage } from '../../tools/liste-sql-modele' ;
 import {AjoutMot} from '../ajoutMot/ajoutMot' ;
-import { ListeSqlModelePageAjout } from '../../tools/liste-sql-modele.ajout';
+import { ListeSqlModelePageAjout } from '../../tools/liste-sql-modele-ajout';
 
 /**
  * Generated class for the ListeEquipementsPage page.
