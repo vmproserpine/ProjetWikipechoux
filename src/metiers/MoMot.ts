@@ -46,4 +46,6 @@ export class MoMot extends MoSqlTable
   getFk(){
     return this.idTheme;
   }
+
+  //myDate: String = new Date().toISOString();
 }

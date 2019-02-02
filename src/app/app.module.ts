@@ -48,6 +48,7 @@ import { UploadImage } from '../components/upload-image/upload-image' ;
 
 import { RemoteSqlProvider } from '../providers/remotesql/remotesql';
 import { JetonDeConnectionProvider } from '../providers/jeton-de-connection/jeton-de-connection' ;
+import { MAJMOT } from '../pages/majMot/majMot';
 
 
 
@@ -89,7 +90,8 @@ import { JetonDeConnectionProvider } from '../providers/jeton-de-connection/jeto
     AjoutPhoto,
     AjoutThemes,
     AjoutUser,
-    AjoutVideo
+    AjoutVideo,
+    MAJMOT
   ],
   imports: [
     BrowserModule,
@@ -120,7 +122,8 @@ import { JetonDeConnectionProvider } from '../providers/jeton-de-connection/jeto
     AjoutPhoto,
     AjoutThemes,
     AjoutUser,
-    AjoutVideo
+    AjoutVideo,
+    MAJMOT
   ],
   providers: [
     StatusBar,

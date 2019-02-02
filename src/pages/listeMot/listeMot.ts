@@ -2,8 +2,10 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RemoteSqlProvider } from '../../providers/remotesql/remotesql';
 import { MoMot } from '../../metiers/MoMot' ;
-import {AjoutMot} from '../ajoutMot/ajoutMot' ;
+import {MAJMOT} from '../majMot/majMot' ;
 import { ListeSqlModelePage } from '../../tools/liste-sql-modele' ;
+import {AjoutMot} from '../ajoutMot/ajoutMot' ;
+import { ListeSqlModelePageAjout } from '../../tools/liste-sql-modele.ajout';
 
 /**
  * Generated class for the ListeEquipementsPage page.
@@ -17,7 +19,7 @@ import { ListeSqlModelePage } from '../../tools/liste-sql-modele' ;
   selector: 'page-listeMot',
   templateUrl: 'listeMot.html',
 })
-export class ListeMot extends ListeSqlModelePage
+export class ListeMot extends ListeSqlModelePageAjout
 {
   private idMot: number ;
   private nom_mot: string ;
@@ -26,7 +28,7 @@ export class ListeMot extends ListeSqlModelePage
     public navParams: NavParams,
     public sqlPrd: RemoteSqlProvider) 
   {
-    super( new MoMot (), AjoutMot, navCtrl, navParams, sqlPrd ) ;
+    super( new MoMot (), MAJMOT, AjoutMot, navCtrl, navParams, sqlPrd ) ;
 
     this.idMot = null ;
     this.nom_mot = null ;

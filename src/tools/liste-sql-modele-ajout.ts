@@ -1,24 +1,27 @@
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RemoteSqlProvider } from '../providers/remotesql/remotesql';
-import { Modele } from '../tools/Modele' ;
+import { Modele } from './Modele' ;
 
-export class ListeSqlModelePage
+export class ListeSqlModelePageAjout
 {
 
   protected liste: Array<Modele> ;
   private selectedObject: Modele ;
   protected modeleObject: Modele ;
   private classDetailView: any ;
+  private classAjout: any;
 
   constructor( 
     modeleObject: Modele,
     classDetailView: any,
+    classAjout: any,
     public navCtrl: NavController, 
     public navParams: NavParams,
     public sqlPrd: RemoteSqlProvider )
   {
     this.modeleObject = modeleObject ;
     this.classDetailView = classDetailView ;
+    this.classAjout = classAjout;
     this.liste = [] ;
     this.selectedObject = null ;
   }
@@ -72,6 +75,21 @@ export class ListeSqlModelePage
       if( this.classDetailView ) 
       {
         this.navCtrl.push( this.classDetailView, {object: object} ) ;
+      }  
+    }) ;
+  }
+
+  onNewPage()
+  {
+    let object = this.modeleObject.clone() ;
+    this.liste.push( object ) ;
+    this.selectedObject = object ;
+
+    this.onAfterNewItem( object ).then( (object: any)=>
+    {
+      if( this.classAjout ) 
+      {
+        this.navCtrl.push( this.classAjout, {object: object} ) ;
       }  
     }) ;
   }

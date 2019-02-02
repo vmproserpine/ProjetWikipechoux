@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Ajouter un mot </ion-title>
+    <ion-title>Mise à jour du mot n° {{object.id}} {{object.nom_mot}}</ion-title>
   </ion-navbar>
 </ion-header>
  
@@ -17,7 +17,7 @@
     </ion-item>
     <ion-item>
       <ion-label color="primary">Date de création:</ion-label>
-      <ion-datetime displayFormat= "DD MM, YYYY HH:mm +01:00"  [(ngModel)]="object.date_creation">{{laDateDeCreation}}</ion-datetime>
+      <ion-input  [(ngModel)]="object.date_creation">{{laDateDeCreation}}</ion-input>
     </ion-item>
     <ion-item>
       <ion-label color="primary">Thème:</ion-label>
