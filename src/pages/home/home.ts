@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { JetonDeConnectionProvider } from "../../providers/jeton-de-connection/jeton-de-connection" ; 
 import { ToastController } from 'ionic-angular';
-import { FrmExposantPage } from '../frm-exposant/frm-exposant' ;
 
 @Component({
   selector: 'page-home',

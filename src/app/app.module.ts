@@ -8,14 +8,6 @@ import { VideoPlayer } from '@ionic-native/video-player';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-import { ListeUtilisateursPage } from '../pages/liste-utilisateurs/liste-utilisateurs' ;
-import { FrmExposantPage } from '../pages/frm-exposant/frm-exposant' ;
-import { ListeExposantsPage } from '../pages/liste-exposants/liste-exposants' ;
-import { SaisieLivrePage } from '../pages/saisie-livre/saisie-livre';
-import { ListeLivresPage } from '../pages/liste-livres/liste-livres' ;
-import { ListeRDVPage } from '../pages/ListeRDV/ListeRDV';
-import { SaisieRDVPage } from '../pages/saisie-RDV/saisieRDV';
 import { ListeAnnexe } from '../pages/listeAnnexe/listeAnnexe';
 import { ListeMadeleine } from '../pages/listeMadeleine/listeMadeleine';
 import { ListeMot } from '../pages/listeMot/listeMot';
@@ -57,7 +49,6 @@ import { MAJMOT } from '../pages/majMot/majMot';
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
     TabFormComponent,
     TabRowComponent,
     TabCellComponent,
@@ -70,13 +61,6 @@ import { MAJMOT } from '../pages/majMot/majMot';
     FileSelectorComponent,
     TextAreaComponent,
     UploadImage,
-    ListeUtilisateursPage,
-    FrmExposantPage,
-    ListeExposantsPage,
-    SaisieLivrePage,
-    ListeLivresPage,
-    ListeRDVPage,
-    SaisieRDVPage,
     ListeAnnexe,
     ListeMadeleine,
     ListeMot,
@@ -101,14 +85,6 @@ import { MAJMOT } from '../pages/majMot/majMot';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
-    ListeUtilisateursPage,
-    FrmExposantPage,
-    ListeExposantsPage,
-    SaisieLivrePage,
-    ListeLivresPage,
-    ListeRDVPage,
-    SaisieRDVPage, 
     ListeAnnexe,
     ListeMadeleine,
     ListeMot,

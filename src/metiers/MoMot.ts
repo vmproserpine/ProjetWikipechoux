@@ -15,7 +15,7 @@ export class MoMot extends MoSqlTable
     super( (data)? data : {
         id: null,
         nom_mot: null,
-        date_creation : null,
+        date_creation : new Date(),
         idTheme: null } ) ;
   }
 
